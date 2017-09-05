@@ -2,12 +2,39 @@
 <html ng-app="Rea">
 <head>
 	<title>Rea Coding Exercise</title>
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
 <div ui-view="">
+<div class="col-md-6">
+<h2>Results</h2>
+        <table>
+           
+            <tr ng-repeat="data in myData.results">
+                <td>{{data.price}}</td>
+                <td>{{data.agency.brandingColors.primary}}</td>
+                <td><img ng-src="{{data.agency.logo}}"> </td>
+                <td><img ng-src="{{data.mainImage}}"></td> 
+            </tr>
 
+        </table>
 </div>
+<div class="col-md-6" >
+<h2>Saved Properties</h2>
+		<table>
+            <tr ng-repeat="data in myData.saved">
+                <td>{{data.price}}</td>
+                <td>{{data.agency.brandingColors.primary}}</td>
+                <td><img ng-src="{{data.agency.logo}}"> </td>
+                <td><img ng-src="{{data.mainImage}}"></td> 
+            </tr>
+
+        </table>
+</div>
+</div>
+
 	<script src="lib/angular.min.js"></script>
     <script src="lib/ui-bootstrap-tpls-2.0.1.min.js"></script>
     <script src="lib/angular-ui-router.js"></script>

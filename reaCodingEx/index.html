@@ -10,20 +10,30 @@
 <div ui-view="">
 <div class="col-md-6">
 <h2>Results</h2>
-        <table>
-           
-            <tr ng-repeat="data in myData.results">
+        <table class="table table-bordered table-striped" ng-repeat="data in myData.results">  
+        	<tr>
+        		<th>Price</th>
+        		<th>Color</th>
+        		<th>Logo</th>
+        		<th>Main Image</th>
+        	</tr>
+            <tr >
                 <td>{{data.price}}</td>
                 <td>{{data.agency.brandingColors.primary}}</td>
                 <td><img ng-src="{{data.agency.logo}}"> </td>
                 <td><img ng-src="{{data.mainImage}}"></td> 
             </tr>
-
         </table>
 </div>
 <div class="col-md-6" >
 <h2>Saved Properties</h2>
-		<table>
+		<table class="table table-bordered table-striped">  
+        	<tr>
+        		<th>Price</th>
+        		<th>Color</th>
+        		<th>Logo</th>
+        		<th>Main Image</th>
+        	</tr>
             <tr ng-repeat="data in myData.saved">
                 <td>{{data.price}}</td>
                 <td>{{data.agency.brandingColors.primary}}</td>

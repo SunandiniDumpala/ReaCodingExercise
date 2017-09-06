@@ -1,0 +1,39 @@
+img{
+	height: 70px;
+	width: 200px;
+}
+.header{
+	text-align: center;
+	border:2px solid #bbbbbb;
+	background-color: #bbbbbb;
+}
+input{
+	text-align: center;
+    vertical-align: middle;
+    float: right;
+    margin-right: 500px;
+    margin-left: 250px;
+    position:absolute;
+    top:80%; 
+    column-span: 4;
+    column-width: 100%;
+   
+}
+
+table .hoverme:hover div.link{
+	display: inline-block;
+	background-color: red;
+	z-index: 
+	column-span: 4;
+	column-width: 100%;
+
+}
+
+table tr:hover{
+	background-color: rgba(0,0,0,0.1);
+
+}
+div.link {
+	
+}
+

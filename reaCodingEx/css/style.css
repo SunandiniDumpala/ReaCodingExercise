@@ -1,4 +1,23 @@
 img{
-	height: 70px;
-	width: 200px;
+	height: 100px;
+	width: 150px;
+}
+.hoverme .logo{
+	height: 60px;
+	width: 100px;
+}
+
+td{
+	text-align: center;
+}
+.header{
+	text-align: center;
+	border:2px solid #bbbbbb;
+	background-color: #bbbbbb;
+}
+.showBtn{
+	display: none;
+}
+.hoverRow:hover + .showBtn {
+	display:table-row;
 }

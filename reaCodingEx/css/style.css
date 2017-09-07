@@ -1,23 +1,41 @@
-img{
-	height: 100px;
-	width: 150px;
-}
-.hoverme .logo{
-	height: 60px;
-	width: 100px;
-}
-
+/* Align all data elements in 
+a table to the center
+*/
 td{
 	text-align: center;
 }
+
+/*To adjust size of logo from JSON*/
+.logo{
+	height: 50px;
+	width: 120px;
+}
+
+/*To adjust size of mainImage from JSON*/
+.mainImg{
+	height: 100px;
+	width: 150px;
+}
+
+/*Give a color to the row in a 
+table that displays ID values
+*/
 .header{
 	text-align: center;
 	border:2px solid #bbbbbb;
 	background-color: #bbbbbb;
 }
-.showBtn{
+/* Style to hide and show the Add property 
+and Delete property buttons
+*/
+.table-striped:hover .hoverRow{
+	opacity: 0.4;
+}
+
+.table-striped .showBtn{ 
 	display: none;
 }
-.hoverRow:hover + .showBtn {
-	display:table-row;
+
+.table-striped:hover .showBtn{ 
+	display: table-row;
 }

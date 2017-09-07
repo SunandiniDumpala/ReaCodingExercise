@@ -12,7 +12,7 @@
     <div class="col-md-6">
 
         <h2>Results</h2>
-
+<!--Loop over the results array from JSON -->
         <table class="table table-bordered table-striped" ng-repeat="data in myData.results track by $index"> 
        
             <tr>
@@ -26,20 +26,21 @@
     		    <th>Logo</th>
     		    <th>Main Image</th>
         	</tr>
-
+<!--Lists all the properties present in the result array -->
             <tr class="hoverRow">
         	    <td>{{ $index+1 }}</td>
                 <td>{{ data.price }}</td>
                 <td>{{ data.agency.brandingColors.primary }}
                 </td>
-                <td class="logo">
-                    <img ng-src="{{data.agency.logo}}"> 
+                <td>
+                    <img class="logo" ng-src="{{data.agency.logo}}"> 
                 </td>
                 <td>
-                    <img ng-src="{{data.mainImage}}">
+                    <img class="mainImg" ng-src="{{data.mainImage}}">
                 </td> 
                 
             </tr>
+<!-- Button to add a property to the saved properties list -->
             <tr class="showBtn">
                 <td colspan="5">
                     <button class="btn btn-success" ng-click="addProp(data);">Add Property</button>
@@ -51,38 +52,38 @@
     <div class="col-md-6" >
 
         <h2>Saved Properties</h2>
-
-    	<table class="table table-bordered table-striped" ng-repeat="data in myData.saved track by $index">
+<!-- Loop over the saved properties array from JSON -->
+    	<table class="table table-bordered table-striped"  ng-repeat="data in myData.saved track by $index">
     		
     		<tr>
                 <td class="header" colspan="5">ID:{{data.id}}</td> 
             </tr>
     	
-        	<tr>
+        	<tr >
         		<th>Index</th>
         		<th>Price</th>
         		<th>Color</th>
         		<th>Logo</th>
         		<th>Main Image</th>
         	</tr>
-
+<!--Lists all the properties present in the saved properties array -->
             <tr class="hoverRow">
             	<td>{{ $index+1 }} </td>
                 <td>{{ data.price }}</td>
                 <td>{{ data.agency.brandingColors.primary }}
                 </td>
                 <td class="logo">
-                    <img ng-src="{{data.agency.logo}}"> 
+                    <img class="logo" ng-src="{{data.agency.logo}}"> 
                 </td>
                 <td>
-                    <img ng-src="{{data.mainImage}}">
-                </td>
-                
+                    <img class="mainImg" ng-src="{{data.mainImage}}">
+                </td> 
             </tr>
+<!-- Button to delete a property from saved properties list -->
             <tr class="showBtn">
-                <td colspan="5">
+                <td colspan="5" >
                      <button class="btn btn-danger" ng-click="delete($index);">Delete Property</button>
-                </td>    
+                </td>     
             </tr>
         </table>
     </div>

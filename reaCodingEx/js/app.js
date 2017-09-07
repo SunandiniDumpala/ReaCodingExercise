@@ -1,3 +1,6 @@
+/* Router configuration and injecting dependencies
+   @ui.router
+*/
 angular.module("Rea",["ui.router"]);
 angular.module("Rea").config(function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.otherwise("/index")
@@ -5,7 +8,7 @@ angular.module("Rea").config(function($stateProvider,$urlRouterProvider){
 		.state("index",{
 			url:"/index",
 			templateUrl:"index.html",
-			controller:"dataController",
+			controller:"dataCtrl",
 			controllerAs:"dataCtrlAs"
 		})
 });
